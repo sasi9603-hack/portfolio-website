@@ -10,7 +10,7 @@ import {
   ArrowDown,
   Send,
   ExternalLink,
-  Briefcase,
+
   Code,
   Sparkles,
   Layers,
@@ -329,7 +329,7 @@ export default function Home() {
                     >
                       {/* Background tint overlay */}
                       <div className="absolute inset-0 rounded-3xl overflow-hidden pointer-events-none z-0">
-                        <div className="absolute inset-0 w-full h-full bg-cover bg-center opacity-30 mix-blend-lighten" style={{ backgroundImage: "url('https://honest-fuchsia-g3gjphli.edgeone.dev/Screenshot%202026-07-11%20095048.png')" }} />
+                        <div className="absolute inset-0 w-full h-full bg-cover bg-center opacity-30 mix-blend-lighten" style={{ backgroundImage: "url('https://cdn.phototourl.com/free/2026-07-11-32b83c7d-dbb2-49c4-85bb-21fc21e1bfe3.png')" }} />
                         <div className="absolute inset-0 bg-[#08080a]/60 backdrop-blur-[2px] group-hover:bg-[#08080a]/50 transition-colors duration-500" />
                         <div className="absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-white/25 to-transparent" />
                       </div>
@@ -337,7 +337,7 @@ export default function Home() {
                       {/* Profile details Header */}
                       <div className="relative z-10 flex justify-between items-start">
                         <div className="flex items-center space-x-3">
-                          <div className="w-12 h-12 rounded-full border-2 border-white/20 overflow-hidden bg-cover bg-center bg-no-repeat shadow-lg" style={{ backgroundImage: "url('https://subsequent-pink-ryeyr96y.edgeone.dev/ChatGPT%20Image%20Jul%2010,%202026,%2007_44_41%20PM.png')", backgroundPosition: "15% 25%", backgroundSize: "120%" }} />
+                          <div className="w-12 h-12 rounded-full border-2 border-white/20 overflow-hidden bg-cover bg-center bg-no-repeat shadow-lg" style={{ backgroundImage: "url('https://foreign-gray-ckf3zszs.edgeone.dev/image%20(1).png')", backgroundPosition: "15% 25%", backgroundSize: "120%" }} />
                           <div>
                             <h3 className="font-extrabold text-sm md:text-base tracking-tight flex items-center space-x-1.5 text-white">
                               <span>Sasidharreddy Vennapusa</span>
@@ -472,8 +472,8 @@ export default function Home() {
                       </p>
                     </div>
 
-                    <a 
-                      href={proj.link} 
+                    <a
+                      href={proj.link}
                       target={proj.link.startsWith('http') ? "_blank" : undefined}
                       rel={proj.link.startsWith('http') ? "noopener noreferrer" : undefined}
                       className="inline-flex items-center space-x-2 text-xs text-white/50 hover:text-white transition-colors duration-200 pt-6 border-t border-white/5 font-semibold mt-auto"
@@ -635,10 +635,10 @@ export default function Home() {
                 <a href="https://github.com/sasi9603-hack" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors" aria-label="GitHub">
                   <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482C19.138 20.197 22 16.44 22 12.017 22 6.484 17.522 2 12 2z" /></svg>
                 </a>
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors" aria-label="LinkedIn">
+                <a href="https://www.linkedin.com/in/sasidharreddy-vennapusa-6b70b6370" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors" aria-label="LinkedIn">
                   <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" /></svg>
                 </a>
-                <a href="mailto:sasid@example.com" className="hover:text-white transition-colors"><Mail size={16} /></a>
+                <a href="mailto:sasidharreddy3568@gmail.com" className="hover:text-white transition-colors"><Mail size={16} /></a>
               </div>
             </div>
           </section>

@@ -1,8 +1,8 @@
 'use client';
 
 import { Canvas, useFrame } from '@react-three/fiber';
-import { OrbitControls, Stars } from '@react-three/drei';
-import { useRef, useMemo, useState, useEffect } from 'react';
+import { Stars } from '@react-three/drei';
+import { useRef, useMemo } from 'react';
 import * as THREE from 'three';
 import FuturisticProduct from './FuturisticProduct';
 
@@ -14,19 +14,25 @@ function AmbientParticles({ count = 200 }) {
     const pos = new Float32Array(count * 3);
     const spd = new Float32Array(count);
     const phs = new Float32Array(count * 3);
+    // Stable pseudo-random generator to remain pure during render
+    let seed = 1;
+    const random = () => {
+      const x = Math.sin(seed++) * 10000;
+      return x - Math.floor(x);
+    };
     for (let i = 0; i < count; i++) {
       // Spawn particles in a box around the center
-      pos[i * 3] = (Math.random() - 0.5) * 16;
-      pos[i * 3 + 1] = (Math.random() - 0.5) * 12;
-      pos[i * 3 + 2] = (Math.random() - 0.5) * 12;
+      pos[i * 3] = (random() - 0.5) * 16;
+      pos[i * 3 + 1] = (random() - 0.5) * 12;
+      pos[i * 3 + 2] = (random() - 0.5) * 12;
       
       // Speed of upward float
-      spd[i] = 0.005 + Math.random() * 0.015;
+      spd[i] = 0.005 + random() * 0.015;
       
       // Random phases for trigonometry oscillation
-      phs[i * 3] = Math.random() * Math.PI;
-      phs[i * 3 + 1] = Math.random() * Math.PI;
-      phs[i * 3 + 2] = Math.random() * Math.PI;
+      phs[i * 3] = random() * Math.PI;
+      phs[i * 3 + 1] = random() * Math.PI;
+      phs[i * 3 + 2] = random() * Math.PI;
     }
     return [pos, spd, phs];
   }, [count]);
@@ -91,20 +97,6 @@ function InteractiveGroup({ children }: { children: React.ReactNode }) {
 }
 
 export default function Scene3D() {
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!mounted) {
-    return (
-      <div className="absolute inset-0 bg-transparent flex items-center justify-center pointer-events-none">
-        {/* Loading spacer */}
-      </div>
-    );
-  }
-
   return (
     <div className="fixed inset-0 w-full h-screen z-0 overflow-hidden pointer-events-none">
       <Canvas
