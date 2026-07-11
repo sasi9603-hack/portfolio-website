@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Sasidharreddy Vennapusa - Premium 3D Interactive Portfolio
 
-## Getting Started
+A world-class, premium 3D interactive portfolio website inspired by Apple's Vision Pro product experience and Antigravity Studio's immersive web animations.
 
-First, run the development server:
+🚀 **Live Vercel Deployment**: [https://portfolio-website-plum-pi-39.vercel.app](https://portfolio-website-plum-pi-39.vercel.app)
 
+---
+
+## 🌟 Interactive Experience & Features
+
+* **3D Volumetric Atmosphere**: Built with Three.js (React Three Fiber) rendering ambient particles, deep space stars, and cinematic lighting configurations.
+* **Futuristic Product Core**: A custom 3D headset / AI Core composed of an outer glass shell, vertical/horizontal orbit rings, and an emissive central core that explodes apart dynamically on scroll using GSAP.
+* **Mouse Parallax**: Gentle 3D perspective shifts on lights and camera target tracking the mouse cursor.
+* **Smooth Inertia Scrolling**: Unified scroll wrapper combining Lenis scroll behavior with GSAP ScrollTrigger timelines.
+* **LinkedIn Glass Panel**: A floating glassmorphic overlay containing an interactive LinkedIn profile screenshot, complete with glowing hotspots that reveal core information.
+* **Micro-interactions**: Elastic magnetic button controls, loader overlay transitions, and custom cursor followers.
+* **Cinematic Video Background**: `aikawakenichi-2.mp4` loops softly in the background to set an elegant digital context.
+
+---
+
+## 🛠️ Technology Stack
+
+* **Core Framework**: [Next.js](https://nextjs.org/) (App Router + React 19)
+* **3D Rendering**: [Three.js](https://threejs.org/) & [React Three Fiber (R3F)](https://r3f.docs.pmnd.rs/)
+* **Animations**: [GSAP (ScrollTrigger)](https://gsap.com/) & [Framer Motion](https://www.framer.com/motion/)
+* **Smooth Scroll**: [Lenis Scroll](https://lenis.darkroom.engineering/)
+* **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
+* **Icons**: [Lucide React](https://lucide.dev/)
+
+---
+
+## ⚡ Getting Started
+
+First, install dependencies:
+```bash
+npm install
+```
+
+Second, run the development server:
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📦 Deployment & Verification
 
-## Learn More
+To verify build output correctness locally:
+```bash
+npm run build
+```
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project compiles static pages and deploys to **Vercel** with optimized production bundles.
