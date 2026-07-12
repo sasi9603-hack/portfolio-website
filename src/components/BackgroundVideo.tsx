@@ -6,7 +6,7 @@ export default function BackgroundVideo() {
       <div
         className="absolute inset-0 w-full h-full bg-top opacity-[0.04] bg-repeat-y mix-blend-lighten scale-[1.02]"
         style={{
-          backgroundImage: "url('https://honest-fuchsia-g3gjphli.edgeone.dev/Screenshot%202026-07-11%20095048.png')",
+          backgroundImage: "url('/Linkedin.png')",
           backgroundSize: '100% auto',
         }}
       />
