@@ -337,7 +337,7 @@ export default function Home() {
                       {/* Profile details Header */}
                       <div className="relative z-10 flex justify-between items-start">
                         <div className="flex items-center space-x-3">
-                          <div className="w-12 h-12 rounded-full border-2 border-white/20 overflow-hidden bg-cover bg-center bg-no-repeat shadow-lg" style={{ backgroundImage: "url('https://foreign-gray-ckf3zszs.edgeone.dev/image%20(1).png')", backgroundPosition: "15% 25%", backgroundSize: "120%" }} />
+                          <div className="w-12 h-12 rounded-full border-2 border-white/20 overflow-hidden bg-cover bg-center bg-no-repeat shadow-lg" style={{ backgroundImage: "url('https://im.ge/i/QMEjLz0/delete/EDVNGvHF4A95L5AJwSn3m3py2caGxy5z')", backgroundPosition: "15% 25%", backgroundSize: "120%" }} />
                           <div>
                             <h3 className="font-extrabold text-sm md:text-base tracking-tight flex items-center space-x-1.5 text-white">
                               <span>Sasidharreddy Vennapusa</span>
