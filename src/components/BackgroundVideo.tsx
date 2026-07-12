@@ -4,7 +4,7 @@ export default function BackgroundVideo() {
   return (
     <div className="absolute inset-0 w-full h-full overflow-hidden pointer-events-none z-0">
       <div
-        className="absolute inset-0 w-full h-full bg-top opacity-[0.04] bg-repeat-y mix-blend-lighten scale-[1.02]"
+        className="absolute inset-0 w-full h-full bg-top opacity-[0.10] bg-repeat-y mix-blend-lighten scale-[1.02]"
         style={{
           backgroundImage: "url('/Linkedin.png')",
           backgroundSize: '100% auto',
