@@ -329,7 +329,7 @@ export default function Home() {
                     >
                       {/* Background tint overlay */}
                       <div className="absolute inset-0 rounded-3xl overflow-hidden pointer-events-none z-0">
-                        <div className="absolute inset-0 w-full h-full bg-cover bg-center opacity-30 mix-blend-lighten" style={{ backgroundImage: "url('https://cdn.phototourl.com/free/2026-07-11-32b83c7d-dbb2-49c4-85bb-21fc21e1bfe3.png')" }} />
+                        <div className="absolute inset-0 w-full h-full bg-cover bg-center opacity-30 mix-blend-lighten" style={{ backgroundImage: "url('/Linkedin.png')" }} />
                         <div className="absolute inset-0 bg-[#08080a]/60 backdrop-blur-[2px] group-hover:bg-[#08080a]/50 transition-colors duration-500" />
                         <div className="absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-white/25 to-transparent" />
                       </div>
