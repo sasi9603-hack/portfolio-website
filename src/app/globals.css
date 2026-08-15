@@ -1,29 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,400;0,500;1,400&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;0,900;1,700;1,900&display=swap');
 @import "tailwindcss";
 
 :root {
-  --background: #08080a;
-  --foreground: #f5f5f7;
-  --primary-glow: radial-gradient(circle, rgba(123, 97, 255, 0.15) 0%, rgba(85, 230, 255, 0.05) 50%, rgba(0, 0, 0, 0) 100%);
-  --accent-blue: #4da6ff;
-  --accent-purple: #7b61ff;
-  --accent-cyan: #55e6ff;
+  --background: #38240D;
+  --foreground: #FDFBD4;
+  --primary-glow: radial-gradient(circle, rgba(192, 88, 0, 0.3) 0%, rgba(113, 54, 0, 0.15) 50%, rgba(56, 36, 13, 0) 100%);
+  --accent-amber: #713600;
+  --accent-orange: #C05800;
+  --accent-cream: #FDFBD4;
+  --accent-dark: #38240D;
+  --accent-blue: #C05800;
+  --accent-purple: #C05800;
+  --accent-cyan: #FDFBD4;
 }
 
 @theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-accent-blue: var(--accent-blue);
-  --color-accent-purple: var(--accent-purple);
-  --color-accent-cyan: var(--accent-cyan);
+  --color-accent-amber: var(--accent-amber);
+  --color-accent-orange: var(--accent-orange);
+  --color-accent-cream: var(--accent-cream);
+  --color-accent-dark: var(--accent-dark);
+  --color-accent-blue: #C05800;
+  --color-accent-purple: #C05800;
+  --color-accent-cyan: #FDFBD4;
 }
 
 body {
-  background-color: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: #38240D;
+  color: #FDFBD4;
+  font-family: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
   overflow-x: hidden;
   margin: 0;
   padding: 0;
+}
+
+/* Typography Classes */
+.font-heading {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+.font-sans {
+  font-family: 'Manrope', sans-serif;
+}
+
+.font-mono {
+  font-family: 'DM Mono', monospace;
 }
 
 /* Custom Scrollbar */
@@ -31,44 +53,44 @@ body {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: rgba(8, 8, 10, 0.5);
+  background: rgba(56, 36, 13, 0.8);
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(192, 88, 0, 0.5);
   border-radius: 4px;
-  border: 2px solid rgba(8, 8, 10, 0.5);
+  border: 2px solid rgba(56, 36, 13, 0.8);
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(253, 251, 212, 0.6);
 }
 
-/* Glassmorphism Classes */
+/* Glassmorphism Classes tuned for swatch colors (#38240D, #C05800, #FDFBD4) */
 .glass-panel {
-  background: rgba(18, 18, 24, 0.45);
+  background: rgba(56, 36, 13, 0.65);
   backdrop-filter: blur(20px) saturate(180%);
   -webkit-backdrop-filter: blur(20px) saturate(180%);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  border: 1px solid rgba(253, 251, 212, 0.12);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.45);
 }
 
 .glass-panel-light {
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(253, 251, 212, 0.04);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(253, 251, 212, 0.08);
 }
 
 .glass-card {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.01) 100%);
+  background: linear-gradient(135deg, rgba(253, 251, 212, 0.06) 0%, rgba(113, 54, 0, 0.1) 100%);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(253, 251, 212, 0.12);
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .glass-card:hover {
-  border-color: rgba(123, 97, 255, 0.3);
-  box-shadow: 0 10px 40px -10px rgba(123, 97, 255, 0.15);
+  border-color: rgba(192, 88, 0, 0.5);
+  box-shadow: 0 10px 40px -10px rgba(192, 88, 0, 0.3);
   transform: translateY(-4px);
 }
 
@@ -78,80 +100,31 @@ body {
   pointer-events: none;
 }
 
-/* Custom Cursor */
-.custom-cursor {
-  width: 24px;
-  height: 24px;
-  border: 2px solid rgba(255, 255, 255, 0.4);
-  border-radius: 50%;
-  position: fixed;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-  z-index: 9999;
-  mix-blend-mode: difference;
-  transition: width 0.2s, height 0.2s, border-color 0.2s;
-  transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.custom-cursor-dot {
-  width: 6px;
-  height: 6px;
-  background: #ffffff;
-  border-radius: 50%;
-  position: fixed;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-  z-index: 9999;
-  mix-blend-mode: difference;
-}
-
 /* Typography Gradient Utilities */
 .text-gradient {
-  background: linear-gradient(135deg, #ffffff 30%, #a5a5b1 100%);
+  background: linear-gradient(135deg, #FDFBD4 30%, #e8e2b5 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .text-gradient-purple {
-  background: linear-gradient(135deg, #ffffff 10%, #7b61ff 60%, #55e6ff 100%);
+  background: linear-gradient(135deg, #FDFBD4 10%, #C05800 60%, #713600 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .text-gradient-cyan {
-  background: linear-gradient(135deg, #55e6ff 0%, #4da6ff 100%);
+  background: linear-gradient(135deg, #FDFBD4 0%, #C05800 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-/* Apple-style layout & typography */
+/* Typography */
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 700;
-  letter-spacing: -0.03em;
+  font-family: 'Playfair Display', Georgia, serif;
+  letter-spacing: -0.02em;
 }
 
-/* Smooth Scrolling styles */
-html.lenis, html.lenis body {
-  height: auto;
-}
-
-.lenis.lenis-smooth {
-  scroll-behavior: auto !important;
-}
-
-.lenis.lenis-smooth [data-lenis-prevent] {
-  overscroll-behavior: contain;
-}
-
-.lenis.lenis-stopped {
-  overflow: hidden;
-}
-
-.lenis.lenis-scrolling iframe {
-  pointer-events: none;
-}
-
-/* Magnetic Button Utility */
 .magnetic-btn {
   display: inline-flex;
   align-items: center;
